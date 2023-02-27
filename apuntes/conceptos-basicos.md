@@ -140,6 +140,88 @@ sociedad.
 - Construcción de redes.
 - Código Abierto.
 
+## 1.4 Ciclo de Vida del Desarrollo de Software
+
+El desarrollo de software sigue un ciclo de vida que podemos conocer previamente.
+
+### Etapas
+
+Las siguientes son las etapas del ciclo de vida del desarrollo de software:
+
+1. Comunicación: aquí se comienza la relación con el cliente, consiste en comenzar a 
+2. Análisis: conciste en el planteamiento del sistema que resolverá la problemática.
+  1. Definición de requerimientos.
+  2. Elicitación de requerimientos.
+  2. Análisis del problema.
+  3. Definición de requisitos.
+  4. Elaboración de entrevistas y cuestionarios.
+  5. Se definen propuestas de solución.
+  6. Se define una metodología.
+  7. Se hace un estudio de factibilidad de la parte técnica, de conocimientos, software, hardware, recursos humanos, cuestiones económicas. 
+  8. Se asignan tareas.
+  9. Se asignan funciones.
+  10. Se hace un análisis de impacto.
+  11. Se hace un análisis de riesgos.
+  12. Estimación de costos.
+  13. Estimación de tiempo.
+  14. Se analizan y definen reglas de negocio.
+3. Diseño
+  1. Se realizan diagramas de flujo de datos.
+  2. Diagrama de arquitectura del sistema lógico y físico.
+  3. Diseño de bases de datos (ERD).
+  4. Se define el modelo de datos.
+  5. Se definen los atributos, tipos de datos, usuarios, privilegios, datos de entrada y de salida.
+  6. Se analizan y definen los requerimientos funcionales y no funcionales.
+  7. Diagramas de secuencia.
+  8. Diagramas de contexto.
+  9. Diseño de interfaz
+4. Codificación: en esta etapa se comienza a ejecutar la planeación previa para construir el sistema que resuelva la problemática del usuario.
+5. Pruebas
+  1. Es importante que se puedan intercambiar componentes funcionales entre los distintos _testers_ para que distintas perspectivas encuentren distintas aplicacinoes. 
+6. Integración: es la etapa donde se realiza la integración del sistema con los otros sistemas o componentes externos con los que deberá de interactuar.
+7. Implementación: es cuando se implementa el sistema en producción. Ya sea instalar o desplegar el sistema en los componentes de hardware que lo requieran.
+8. Mantenimiento: es el mantener el sistema funcional durante un periodo de tiempo disponible.
+9. Obsolescencia: es cuando el sistema ya se actualizó, ya se mantuvo un buen rato, y el sistema se convierte en _obsoleto_ por lo que convendrá hacer otro sistema.
+
+## 1.5 Modelo de Procesos
+
+- ¿Qué es un proceso de software? 
+  - Conjunto de actividades, procesos y acciones para desarrollar nuestro software.
+- Modelo de procesos.
+  - Representación abstracta de las acciones, actividades y tareas para poder desarrollar nuestro producto de software.
+  - Nos va a decir cómo podemos transitar dentro de la metodología y cómo se unen todos estos procesos, estas acciones y tareas.
+- Flujos de proceso.
+  - Lineal: define las etapas principales del ciclo de vida de forma lineal, lo que implica que pasaremos de una etapa a otra de manera secuencial. ![Esquema del flujo de proceso lineal][imagen-flujo-lineal]
+  - Iterativo: consiste en repetir una actividad o proceso _n_ veces hasta que cumpla ciertos requisitos o parámetros. Hasta que los modelos y la comunicación con el cliente sean congruentes. ![Esquema del flujo de proceso iterativo][imagen-flujo-iterativo]
+  - Evolutivo. ![Esquema del flujo de proceso evolutivo][imagen-flujo-evolutivo] 
+  - Paralelo: es q![Esquema del flujo de proceso paralelo][imagen-flujo-paralelo]
+
+  
+### Modelo Lineal Secuencial
+
+- Sencillo.
+- Sistemas pequeños.
+- Definición de requerimientos.
+- Fácil gestión.
+- La secuencia no es común.
+- Costoso.
+- Estados de bloqueo.
+- Entrega en las etapas finales.
+
+### Modelo en Cascada
+
+- Permite iteraciones.
+- Añade calidad.
+
+### Modelo en V
+
+- Sistemas medianos.
+- Pruebas.
+- Mayor corrección.
+- Confiabilidad.
+- Calidad.
+
+   
 ## Glosario de Términos
 
 - _Disciplina_: Conjunto de técnicas
@@ -149,3 +231,10 @@ sociedad.
 - _Elicitación de Requisitos_: se considera como la primera etapa en el proceso
   de abstraer una comprensión del problema que se quiere resolver con el producto
   de software.
+- _Artefacto_: es cualquier resultante de una actividad en una fase del ciclo de vida del desarrollo de software.
+
+
+[imagen-flujo-lineal]: img/flujo_lineal.png
+[imagen-flujo-iterativo]: img/flujo_iterativo.png
+[imagen-flujo-evolutivo]: img/flujo_evolutivo.png
+[imagen-flujo-paralelo]: img/flujo_paralelo.png
