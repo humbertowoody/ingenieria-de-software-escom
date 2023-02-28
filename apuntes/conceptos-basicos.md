@@ -220,6 +220,47 @@ Las siguientes son las etapas del ciclo de vida del desarrollo de software:
 - Confiabilidad.
 - Calidad.
 
+### Modelo Incremental
+
+- Producen entregables.
+- Producto fundamental.
+- Uso y evaluación.
+- Planificación para siguiente incremento.
+- Permite trabajar por módulos.
+- Se puede desechar la última versión.
+- Cliente informado.
+- Hardware.
+
+### Modelo de Desarrollo Rápido de Aplicaciones (DRA)
+
+- Permite el refinamiento.
+- Construcción de prototipos.
+- Las fases principales son comprimidas.
+- Divide el proyecto en componentes funcionales.
+- Personal experto.
+- CASE (Computer-Aided Software Engineering)
+- **JAD (Join Application Development)**: Diseño de aplicación Conjunta.
+  - Agilizar el desarrollo.
+  - Definir y revisar requerimientos.
+  - Calidad de las especificaciones.
+  - Comentarios finales, reunión de evaluación.
+
+### Modelo de prototipos
+
+- Requerimientos no definidos.
+- Dudas del desarrollador.
+- Planeación y diseños rápidos.
+- Producto parcial.
+- Miedo e incredulidad del cliente.
+- Zona de confort para el desarrollador.
+- Fred Brooks
+
+### Modelo espiral
+
+- Proyecto de desarrollo de concepto.
+- Proyecto de desarrollo de producto nuevo.
+- Proyecto de mejora del producto.
+
 ## Glosario de Términos
 
 - _Disciplina_: Conjunto de técnicas
@@ -229,7 +270,8 @@ Las siguientes son las etapas del ciclo de vida del desarrollo de software:
 - _Elicitación de Requisitos_: se considera como la primera etapa en el proceso
   de abstraer una comprensión del problema que se quiere resolver con el producto
   de software.
-- _Artefacto_: es cualquier resultante de una actividad en una fase del ciclo de vida del desarrollo de software.
+- _Artefacto_: es cualquier resultante de una actividad en una fase del ciclo
+  de vida del desarrollo de software.
 
 [imagen-flujo-lineal]: img/flujo_lineal.png
 [imagen-flujo-iterativo]: img/flujo_iterativo.png
