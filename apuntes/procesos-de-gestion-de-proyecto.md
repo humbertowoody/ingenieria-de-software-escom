@@ -1,20 +1,20 @@
-# 2. Procesos de Gestión de Proyecto 
+# 2. Procesos de Gestión de Proyecto
 
 ## 2.1. Ámbito del Software
 
-- **Ámbito**: conjunto de funcionalidades y razgos que se va a ejecutar dentro de 
-un contexto definido.
-   - Contexto.
-   - Objetivos de información.
-   - Función y desempeño.
+- **Ámbito**: conjunto de funcionalidades y razgos que se va a ejecutar dentro de
+  un contexto definido.
+  - Contexto.
+  - Objetivos de información.
+  - Función y desempeño.
 - **Recolección de Información**
-   - Preguntas de contexto libre
-   - Meta-cuestiones
+  - Preguntas de contexto libre
+  - Meta-cuestiones
 
 ### Preguntas para realizar el levantamiento inicial de requerimientos de un sistema.
 
-A continuación se dará una lista de preguntas que podremos utilizar para 
-obtener la información más básica de un sistema o en una reunión con algún 
+A continuación se dará una lista de preguntas que podremos utilizar para
+obtener la información más básica de un sistema o en una reunión con algún
 cliente.
 
 - ¿Por qué medio se enteró de nosotros?
@@ -43,7 +43,7 @@ cliente.
 
 ### TFEA
 
-TFEA (Facilitated Application Specification Techniques) es _Técnicas para 
+TFEA (Facilitated Application Specification Techniques) es _Técnicas para
 facilitar las especificaciones de la aplicación_.
 
 - Punto de reunión.
@@ -62,7 +62,7 @@ facilitar las especificaciones de la aplicación_.
 - Evaluación económica.
 - Evaluación social.
 
-Modelo de estudio de factibilidad 
+Modelo de estudio de factibilidad
 
 - Resumen ejecutivo.
 - Antecedentes del proyecto.
@@ -72,53 +72,52 @@ Modelo de estudio de factibilidad
 ## 2.3. Análisis de Riesgos
 
 - ¿Qué es un riesgo?
-   - Pequeños o grandes problemas que pueden o no suceder.
+  - Pequeños o grandes problemas que pueden o no suceder.
 - Riesgo de software (tiempo, costo, calidad, rendimiento)
-   - Tecnología
-   - Requerimientos 
-   - Personal
-   - Técnicos 
-   - Empresariales
+  - Tecnología
+  - Requerimientos
+  - Personal
+  - Técnicos
+  - Empresariales
 - Componentes y promotores de Riesgo
-   - Rendimiento 
-   - Costo 
-   - Apoyo (mantenibilidad)
-   - Calendario
+  - Rendimiento
+  - Costo
+  - Apoyo (mantenibilidad)
+  - Calendario
 - Gestión de Riesgos
-   - Identificación de riesgos 
-   - Análisis de riesgos 
-        - Definir probabilidad 
-        - Definir consecuencia o impacto 
-        - Priorizar
-- Manejo de Riesgos 
-   - Estrategias de prevención (posibilidad)
-   - Estrategias de minimización (impacto)
-   - Planes de contingencia
+  - Identificación de riesgos
+  - Análisis de riesgos
+    - Definir probabilidad
+    - Definir consecuencia o impacto
+    - Priorizar
+- Manejo de Riesgos
+  - Estrategias de prevención (posibilidad)
+  - Estrategias de minimización (impacto)
+  - Planes de contingencia
 - Supervisión de riesgos
 
-### Matriz de probabilidad 
+### Matriz de probabilidad
 
-|¿Qué tan frecuente?|Valor| Valor en %|
-|:---:|:---:|:---:|
-|Frecuente|5|75% - 100%|
-|Probable|4|50%- 75%|
-|Ocasional|3|25% - 50%|
-|Posible|2|10% - 25%|
-|Imposible|1|Menor a 1%|
+| ¿Qué tan frecuente? | Valor | Valor en % |
+| :-----------------: | :---: | :--------: |
+|      Frecuente      |   5   | 75% - 100% |
+|      Probable       |   4   |  50%- 75%  |
+|      Ocasional      |   3   | 25% - 50%  |
+|       Posible       |   2   | 10% - 25%  |
+|      Imposible      |   1   | Menor a 1% |
 
 ### Matriz de consecuencia
 
-|¿Cuál sería la consecuencia?|Valor|
-|:---:|:---:|
-|Catastrófico|E
-|Peligroso|D
-|Moderado|C
-|Menor|B
-|Insignificante|A
+| ¿Cuál sería la consecuencia? | Valor |
+| :--------------------------: | :---: |
+|         Catastrófico         |   E   |
+|          Peligroso           |   D   |
+|           Moderado           |   C   |
+|            Menor             |   B   |
+|        Insignificante        |   A   |
 
-### Matriz de valoración de riesgos 
+### Matriz de valoración de riesgos
 
 ![Matriz de valoración de riesgos][imagen-matriz-valoracion-riesgos]
-
 
 [imagen-matriz-valoracion-riesgos]: img/matriz-riesgos.png
