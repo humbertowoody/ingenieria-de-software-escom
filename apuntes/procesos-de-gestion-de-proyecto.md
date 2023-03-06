@@ -68,3 +68,57 @@ Modelo de estudio de factibilidad
 - Antecedentes del proyecto.
 - Descripción del proyecto y su contexto.
 - Alcance del estudio de factibilidad.
+
+## 2.3. Análisis de Riesgos
+
+- ¿Qué es un riesgo?
+   - Pequeños o grandes problemas que pueden o no suceder.
+- Riesgo de software (tiempo, costo, calidad, rendimiento)
+   - Tecnología
+   - Requerimientos 
+   - Personal
+   - Técnicos 
+   - Empresariales
+- Componentes y promotores de Riesgo
+   - Rendimiento 
+   - Costo 
+   - Apoyo (mantenibilidad)
+   - Calendario
+- Gestión de Riesgos
+   - Identificación de riesgos 
+   - Análisis de riesgos 
+        - Definir probabilidad 
+        - Definir consecuencia o impacto 
+        - Priorizar
+- Manejo de Riesgos 
+   - Estrategias de prevención (posibilidad)
+   - Estrategias de minimización (impacto)
+   - Planes de contingencia
+- Supervisión de riesgos
+
+### Matriz de probabilidad 
+
+|¿Qué tan frecuente?|Valor| Valor en %|
+|:---:|:---:|:---:|
+|Frecuente|5|75% - 100%|
+|Probable|4|50%- 75%|
+|Ocasional|3|25% - 50%|
+|Posible|2|10% - 25%|
+|Imposible|1|Menor a 1%|
+
+### Matriz de consecuencia
+
+|¿Cuál sería la consecuencia?|Valor|
+|:---:|:---:|
+|Catastrófico|E
+|Peligroso|D
+|Moderado|C
+|Menor|B
+|Insignificante|A
+
+### Matriz de valoración de riesgos 
+
+![Matriz de valoración de riesgos][imagen-matriz-valoracion-riesgos]
+
+
+[imagen-matriz-valoracion-riesgos]: img/matriz-riesgos.png
