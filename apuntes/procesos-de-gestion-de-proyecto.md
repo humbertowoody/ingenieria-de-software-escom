@@ -245,7 +245,6 @@ Lo primero que debemos hacer es llenar la siguiente tabla:
 
 Tabla de Datos
 : Archivos lógicos internos.
-: Lol
 
 [imagen-matriz-valoracion-riesgos]: img/matriz-riesgos.png
 [imagen-modelos-estimacion]: img/2-5-2-modelos-estimacion.png
