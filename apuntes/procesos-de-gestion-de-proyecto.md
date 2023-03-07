@@ -1,5 +1,23 @@
 # 2. Procesos de Gestión de Proyecto
 
+Contenidos:
+
+- [2. Procesos de Gestión de Proyecto](#2-procesos-de-gestión-de-proyecto)
+  - [2.1. Ámbito del Software](#21-ámbito-del-software)
+    - [Preguntas para realizar el levantamiento inicial de requerimientos de un sistema.](#preguntas-para-realizar-el-levantamiento-inicial-de-requerimientos-de-un-sistema)
+    - [TFEA](#tfea)
+  - [Estudio de Factibilidad](#estudio-de-factibilidad)
+  - [2.3. Análisis de Riesgos](#23-análisis-de-riesgos)
+    - [Matriz de probabilidad](#matriz-de-probabilidad)
+    - [Matriz de consecuencia](#matriz-de-consecuencia)
+    - [Matriz de valoración de riesgos](#matriz-de-valoración-de-riesgos)
+  - [2.5. Mediciones](#25-mediciones)
+    - [2.5.1. Métricas](#251-métricas)
+    - [2.5.2 Modelos de estimación](#252-modelos-de-estimación)
+      - [Ejercicio 1](#ejercicio-1)
+      - [Ejercicio 2](#ejercicio-2)
+  - [Glosario de Términos](#glosario-de-términos)
+
 ## 2.1. Ámbito del Software
 
 - **Ámbito**: conjunto de funcionalidades y razgos que se va a ejecutar dentro de
@@ -116,8 +134,122 @@ Modelo de estudio de factibilidad
 |            Menor             |   B   |
 |        Insignificante        |   A   |
 
+
 ### Matriz de valoración de riesgos
 
 ![Matriz de valoración de riesgos][imagen-matriz-valoracion-riesgos]
 
+## 2.5. Mediciones
+
+Para poder estimar y medir cómo va nuestro producto de software tenemos que contar con distintos mecanismos y técnicas para poder medir y estimar los costos y tiempos de nuestro proyecto.
+### 2.5.1. Métricas 
+
+Una métrica es una medida estándar de un grado en el que un sistema de software 
+o un proceso de software posee en sus propiedades. Estas métricas nos van a 
+ayudar a realizar nuestras estimaciones. Para esto le vamos a colocar un valor 
+cuantitativo a un aspecto cualitativo del producto de software.
+
+- Métrica
+  - Datos cualitativos
+  - Toma en cuenta:
+    - Funcionalidad
+    - Complejidad
+    - Eficiencia
+  - Da un valor al atributo de un producto.
+- Características de las métricas de software:
+  - Simple y calculable.
+  - Congruente y objetiva.
+  - Efectivo en la retroalimentación a la calidad.
+
+- Alan J. Al-bricht, 1979: necesita tomar en cuenta la funcionalidad del sistema, sino, para él no es una buena estimación.
+
+### 2.5.2 Modelos de estimación
+
+- Análisis de puntos de función (function point analysis).
+- International Function Point User Group, 1986 (IFPUG).
+- Especificaciones funcionales (interacción y almacenamiento).
+  - Valores de dominio de información:
+    - **Número de entradas externas (EE)**: entradas que produce el usuario, puede producir un cambio en nuestra tabla de datos, modifica la base de datos. El lector de código de barras, el código QR, la contraseña, un formulario etc. Puede ser una _alta_, una _baja_ o un _cambio_.
+    - **Número de salidas externas (SE)**: van a expresar los resultados del sistema, y se lo mostramos al usuario, listas, reportes, también pueden ser mensajes de error, la parte intuitiva de un sistema, cuando transferimos datos a una USB externa o a otro sistema.
+    - **Número de consultas externas (CE)**: flujo bidireccional de datos, no generan ninguna modificación en la tabla de datos.
+    - **Número de archivos lógicos internos (ALI)**: son las tablas de datos.
+    - **Número de archivos de interfaz externos (AIE)**: son las peticiones que se hacen a otros sistemas.
+
+Clasificaciones de cada uno de los _valores de dominio de información_:
+
+![Imagen de Modelos de Estimación][imagen-modelos-estimacion]
+
+Valores de dominio de información:
+
+![Valores de dominio de información][imagen-valores-dominio-información]
+
+Necesitamos saber cuál es el **valor de ajuste**, para esto tenemos los siguientes _factores de complejidad_:
+
+![Factores de Complejidad][imagen-factores-complejidad]
+
+Consideraciones para nuestras estimaciones:
+
+- Salario del desarrollador de software
+- Puntos de función sin ajustar (PFSA)
+- PUntos de función ajustados (PFA)
+- Factor de ajuste (FA)
+- Horas efectivas (6)
+- Hora de PF promedio (8)
+- Número de desarrolladores
+- Días laborables al mes (20)
+- Otros gastos.
+
+> Para esta materia sólamente usaremos **dos decimales siempre**
+
+Fórmulas:
+
+- $\text{PFA} = \text{PFSA} \times (0.65 + (0.01 \times FA))$
+- $\text{horas} = \text{PFSA} \times \text{horas PF promedio}(8)$
+- $\text{Días} = \text{horas} / \text{horas efectivas por día}(6)$
+- $\text{Meses} = \text{Días}/20$
+- $\text{Costo} = \text{Número de desarrolladores} \times \text{meses} \times \text{salario} + \text{otros gastos}$
+
+> Otros gastos: viáticos, renta de lugar, renta de servidores, internet, hardware, licencias, capacitación, luz, gas, agua, papelería, etc.
+
+#### Ejercicio 1
+
+En clase resolvimos el siguiente ejercicio:
+
+![Imagen del Ejercicio de Estimación visto en clase][imagen-ejercicio-estimacion]
+
+> Se le conoce también como _Diagrama de Contexto_.
+
+- Número de entradas externas (EE): 3, contraseña, botón de pánico, activar desactivar
+- Número de salidas externas (SE): 2, mensajes y estado de sensor. 
+- Número de consultas externas (CE): 2, consulta de zona y consulta de sensor.
+- Número de archivos lógicos internos (ALI): 1, subsistema monitoreo y respuesta (son tablas).
+- Número de archivos de interfaz externos (AIE): 4, sensor de prueba, establecimiento de zona, activar/desactivar y alerta de alarma.
+
+#### Ejercicio 2
+
+Lo primero que debemos hacer es llenar la siguiente tabla:
+
+![Tabla inicial ejercicio 2][imagen-ejercicio-2-estimacion]
+
+- Aquí tomamos todos como simples porque realmente son muy simples (contraseña y demás).
+- Seguimos el orden de evaluación:
+  1. PFA: aquí se vale hacer el redondeo.
+  2. Horas
+  3. Días
+  4. Meses
+  5. Costo
+- Realizamos las operaciones _paso a paso_, ojo: el profesor pidió que no nos saltáramos pasos en los cálculos porque necesita ver de dónde salieron los valores intermedios.
+
+
+## Glosario de Términos
+
+Tabla de Datos
+: Archivos lógicos internos.
+: Lol
+
 [imagen-matriz-valoracion-riesgos]: img/matriz-riesgos.png
+[imagen-modelos-estimacion]: img/2-5-2-modelos-estimacion.png
+[imagen-valores-dominio-información]: img/valores-dominio-informacion.png
+[imagen-factores-complejidad]: img/factores-complejidad.png
+[imagen-ejercicio-estimacion]: img/ejercicio-estimacion.png
+[imagen-ejercicio-2-estimacion]: img/ejercicio-2-estimacion.png
