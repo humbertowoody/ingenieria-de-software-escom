@@ -16,6 +16,11 @@ Contenidos:
     - [2.5.2 Modelos de estimación](#252-modelos-de-estimación)
       - [Ejercicio 1](#ejercicio-1)
       - [Ejercicio 2](#ejercicio-2)
+    - [COCOMO](#cocomo)
+    - [Submodelos](#submodelos)
+    - [Esquema de modos de desarrollo de software.](#esquema-de-modos-de-desarrollo-de-software)
+    - [Ecuaciones por tipo de modelo COCOMO: Básico e Intermedio](#ecuaciones-por-tipo-de-modelo-cocomo-básico-e-intermedio)
+    - [Valores constantes por modo de desarrollo](#valores-constantes-por-modo-de-desarrollo)
   - [Glosario de Términos](#glosario-de-términos)
 
 ## 2.1. Ámbito del Software
@@ -239,12 +244,55 @@ Lo primero que debemos hacer es llenar la siguiente tabla:
   4. Meses
   5. Costo
 - Realizamos las operaciones _paso a paso_, ojo: el profesor pidió que no nos saltáramos pasos en los cálculos porque necesita ver de dónde salieron los valores intermedios.
+### COCOMO
 
+_Constructive Cost Model (COCOMO)_ es un modelo matemático para la estimación de costos.
+
+### Submodelos
+
+- Básico: cuando solo nos dan KLDC (_Kilo Líneas de Código_, _Miles de Líneas de Código_).
+- Intermedio: cuando nos dan atributos de hardware, personal, personal, proyecto y producto.
+- Avanzado: impacto de los conductores de coste.
+
+Aquí elegiremos en función de qué cosas se nos dan en el problema.
+
+### Esquema de modos de desarrollo de software.
+
+A partir del submodelo seleccionado, usaremos un modo de desarrollo a partir del tamaño y requisitos:
+
+| Modo de Desarrollo |  Requisitos  |          Tamaño           | Complejidad | Personas | Experiencia |
+| :----------------: | :----------: | :-----------------------: | :---------: | :------: | :---------: |
+|     Orgánicao      | Poco rígidos | Pequeño (menor a 50k LDC) |   Pequeña   |  Pocas   |    Mucha    |
+|    Semiacoplado    |  Poco/medio  |  Medio (50k a 300k LDC)   |    Medio    |  Medio   |    Medio    |
+|     Emportrado     |     Alto     | Grande (mayor a 300k LDC) |    Alta     |   Alta   |    Poca     |
+
+### Ecuaciones por tipo de modelo COCOMO: Básico e Intermedio
+
+- $ME$: para calcular esto, se debe consultar la tabla de _Multiplicadores de Esfuerzo (ME)_, obtener los valores y multiplicarlos entre sí.
+  - Por ejemplo, si nos dijeran que solo hay que considerar Reliabilidad (RELY) y Experiencia de Aplicación (A), por lo que realizamos la multiplicación de los valores.
+
+|    Ecuación    |        Submodelo Básico        |           Submodelo Intermedio           |
+| :------------: | :----------------------------: | :--------------------------------------: |
+| Esfuerzo ($E$) | $(E)=a \times (\text{KLDC})^b$ | $(E)=a \times (\text{KLDC})^b \times ME$ |
+|  Tiempo ($T$)  |      $(T)=c \times (E)^d$      |           $(T)=c \times (E)^d$           |
+| Personal ($P$) |           $(P)=E/T$            |                $(P)=E/T$                 |
+
+### Valores constantes por modo de desarrollo
+
+| Modo de Desarrollo | COCOMO básico $a$ | COCOMO intermedio $A$ |  $b$  |  $c$  |  $d$  |
+| :----------------: | :---------------: | :-------------------: | :---: | :---: | :---: |
+|      Orgánico      |        2.4        |          3.2          | 1.05  | 2.50  | 0.38  |
+|    Semiacoplado    |        3.0        |          3.0          | 1.12  | 2.50  | 0.35  |
+|     Empotrado      |        3.6        |          2.8          | 1.20  | 2.50  | 0.32  |
 
 ## Glosario de Términos
 
 Tabla de Datos
 : Archivos lógicos internos.
+
+KLDC
+: _Kilo Líneas de Código_.
+: Miles de líneas de código.
 
 [imagen-matriz-valoracion-riesgos]: img/matriz-riesgos.png
 [imagen-modelos-estimacion]: img/2-5-2-modelos-estimacion.png
