@@ -16,11 +16,18 @@ Contenidos:
     - [2.5.2 Modelos de estimación](#252-modelos-de-estimación)
       - [Ejercicio 1](#ejercicio-1)
       - [Ejercicio 2](#ejercicio-2)
-    - [COCOMO](#cocomo)
-    - [Submodelos](#submodelos)
-    - [Esquema de modos de desarrollo de software.](#esquema-de-modos-de-desarrollo-de-software)
-    - [Ecuaciones por tipo de modelo COCOMO: Básico e Intermedio](#ecuaciones-por-tipo-de-modelo-cocomo-básico-e-intermedio)
-    - [Valores constantes por modo de desarrollo](#valores-constantes-por-modo-de-desarrollo)
+      - [COCOMO](#cocomo)
+        - [Submodelos](#submodelos)
+        - [Esquema de modos de desarrollo de software.](#esquema-de-modos-de-desarrollo-de-software)
+        - [Ecuaciones por tipo de modelo COCOMO: Básico e Intermedio](#ecuaciones-por-tipo-de-modelo-cocomo-básico-e-intermedio)
+        - [Valores constantes por modo de desarrollo](#valores-constantes-por-modo-de-desarrollo)
+      - [COCOMO II](#cocomo-ii)
+        - [PMAT Ratings for Estimated Process Maturity Level (EPML)](#pmat-ratings-for-estimated-process-maturity-level-epml)
+        - [Valores de Factores de Escala](#valores-de-factores-de-escala)
+        - [Constantes de calibración del modelo](#constantes-de-calibración-del-modelo)
+        - [Fórmulas Generales](#fórmulas-generales)
+          - [Fórmula de esfuerzo:](#fórmula-de-esfuerzo)
+          - [Fórmula de tiempo calendario](#fórmula-de-tiempo-calendario)
   - [Glosario de Términos](#glosario-de-términos)
 
 ## 2.1. Ámbito del Software
@@ -244,11 +251,11 @@ Lo primero que debemos hacer es llenar la siguiente tabla:
   4. Meses
   5. Costo
 - Realizamos las operaciones _paso a paso_, ojo: el profesor pidió que no nos saltáramos pasos en los cálculos porque necesita ver de dónde salieron los valores intermedios.
-### COCOMO
+#### COCOMO
 
 _Constructive Cost Model (COCOMO)_ es un modelo matemático para la estimación de costos.
 
-### Submodelos
+##### Submodelos
 
 - Básico: cuando solo nos dan KLDC (_Kilo Líneas de Código_, _Miles de Líneas de Código_).
 - Intermedio: cuando nos dan atributos de hardware, personal, personal, proyecto y producto.
@@ -256,7 +263,7 @@ _Constructive Cost Model (COCOMO)_ es un modelo matemático para la estimación 
 
 Aquí elegiremos en función de qué cosas se nos dan en el problema.
 
-### Esquema de modos de desarrollo de software.
+##### Esquema de modos de desarrollo de software.
 
 A partir del submodelo seleccionado, usaremos un modo de desarrollo a partir del tamaño y requisitos:
 
@@ -266,7 +273,7 @@ A partir del submodelo seleccionado, usaremos un modo de desarrollo a partir del
 |    Semiacoplado    |  Poco/medio  |  Medio (50k a 300k LDC)   |    Medio    |  Medio   |    Medio    |
 |     Emportrado     |     Alto     | Grande (mayor a 300k LDC) |    Alta     |   Alta   |    Poca     |
 
-### Ecuaciones por tipo de modelo COCOMO: Básico e Intermedio
+##### Ecuaciones por tipo de modelo COCOMO: Básico e Intermedio
 
 - $ME$: para calcular esto, se debe consultar la tabla de _Multiplicadores de Esfuerzo (ME)_, obtener los valores y multiplicarlos entre sí.
   - Por ejemplo, si nos dijeran que solo hay que considerar Reliabilidad (RELY) y Experiencia de Aplicación (A), por lo que realizamos la multiplicación de los valores.
@@ -277,13 +284,78 @@ A partir del submodelo seleccionado, usaremos un modo de desarrollo a partir del
 |  Tiempo ($T$)  |      $(T)=c \times (E)^d$      |           $(T)=c \times (E)^d$           |
 | Personal ($P$) |           $(P)=E/T$            |                $(P)=E/T$                 |
 
-### Valores constantes por modo de desarrollo
+##### Valores constantes por modo de desarrollo
 
 | Modo de Desarrollo | COCOMO básico $a$ | COCOMO intermedio $A$ |  $b$  |  $c$  |  $d$  |
 | :----------------: | :---------------: | :-------------------: | :---: | :---: | :---: |
 |      Orgánico      |        2.4        |          3.2          | 1.05  | 2.50  | 0.38  |
 |    Semiacoplado    |        3.0        |          3.0          | 1.12  | 2.50  | 0.35  |
 |     Empotrado      |        3.6        |          2.8          | 1.20  | 2.50  | 0.32  |
+
+#### COCOMO II
+
+Factores de escala:
+
+- **Precedencia (PREC)**: la experiencia que tienes en el sistema que estás haciendo en este momento.
+- **Flexibilidad de Desarrollo (FLEX)**: la flexibilidad del cliente ante el desarrollo que se va a hacer.
+- **Resolución de arquitectura / Riesgo (RESL)**: qué tan bien estamos haciendo los modelos y arquitectura de software y qué tan bien estamos haciendo análisis de riesgos.
+- **Cohesión de Equipo (TEAM)**: habla sobre los stakeholders.
+- **Madurez del proceso (PMAT)**: habla sobre el equipo de desarrollo y nos dice qué tan bien estan nuestros procesos para poder producir productos de software.
+
+La sumatoria de los factores de cada uno van a resultar en el factor de escala.
+
+##### PMAT Ratings for Estimated Process Maturity Level (EPML)
+
+| PMAT Rating |      Maturity Level      | EPML  |
+| :---------: | :----------------------: | :---: |
+|  Very Low   | CMM Level 1 (lower half) |   0   |
+|     Low     | CMM Level 1 (upper half) |   1   |
+|   Nominal   |       CMM Level 2        |   2   |
+|    High     |       CMM Level 3        |   3   |
+|  Very High  |       CMM Level 4        |   4   |
+| Extra High  |       CMM Level 5        |   5   |
+
+
+##### Valores de Factores de Escala
+
+| Driver | Very Low |  Low  | Nominal | High  | Very High | Extra High |
+| :----: | :------: | :---: | :-----: | :---: | :-------: | :--------: |
+|  PREC  |   6.20   | 4.96  |  3.72   | 2.48  |   1.24    |    0.00    |
+|  FLEX  |   5.07   | 4.05  |  3.04   | 2.03  |   1.01    |    0.00    |
+|  RESL  |   7.07   | 5.65  |  4.24   | 2.83  |   1.41    |    0.00    |
+|  TEAM  |   5.48   | 4.38  |  3.29   | 2.19  |   1.10    |    0.00    |
+|  PMAT  |   7.80   | 6.24  |  4.68   | 3.12  |   1.56    |    0.00    |
+
+##### Constantes de calibración del modelo
+
+- $A = 2.94$
+- $B = 0.91$
+- $C = 3.67$
+- $D = 0.28$
+
+##### Fórmulas Generales
+
+- $PM$: esfuerzo en persona mes (152 horas).
+- $\text{Size}$: tamaño en miles de LOCs (KLOCs) o puntos de función **no ajustados**.
+- $EM$: multiplicadores de esfuerzo.
+- $SF$: factores de escala exponencial.
+- $E$: incremento de esfuerzo para proyectos grandes.
+
+###### Fórmula de esfuerzo:
+
+$$PM_{NS} = A \times \text{Size}^E \times \prod_{i = 1}^n EM_i$$
+
+dónde:
+
+$$E = B + 0.01 \times \sum_{j=1}^5 SF_j$$
+
+###### Fórmula de tiempo calendario
+
+$$TDEV_{NS} = C \times (PM_{NS})^F$$
+
+dónde:
+
+$$F = D + 0.2 \times 0.01 \times \sum_{j=1}^5 SF_j$$
 
 ## Glosario de Términos
 
@@ -293,6 +365,9 @@ Tabla de Datos
 KLDC
 : _Kilo Líneas de Código_.
 : Miles de líneas de código.
+
+Stakeholders
+: Son las partes interesadas en un proyecto.
 
 [imagen-matriz-valoracion-riesgos]: img/matriz-riesgos.png
 [imagen-modelos-estimacion]: img/2-5-2-modelos-estimacion.png
