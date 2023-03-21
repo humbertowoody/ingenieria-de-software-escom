@@ -28,6 +28,7 @@ Contenidos:
         - [Fórmulas Generales](#fórmulas-generales)
           - [Fórmula de esfuerzo:](#fórmula-de-esfuerzo)
           - [Fórmula de tiempo calendario](#fórmula-de-tiempo-calendario)
+      - [COCOMO II: Multiplicadores de Esfuerzo](#cocomo-ii-multiplicadores-de-esfuerzo)
   - [Glosario de Términos](#glosario-de-términos)
 
 ## 2.1. Ámbito del Software
@@ -146,7 +147,6 @@ Modelo de estudio de factibilidad
 |            Menor             |   B   |
 |        Insignificante        |   A   |
 
-
 ### Matriz de valoración de riesgos
 
 ![Matriz de valoración de riesgos][imagen-matriz-valoracion-riesgos]
@@ -154,11 +154,12 @@ Modelo de estudio de factibilidad
 ## 2.5. Mediciones
 
 Para poder estimar y medir cómo va nuestro producto de software tenemos que contar con distintos mecanismos y técnicas para poder medir y estimar los costos y tiempos de nuestro proyecto.
-### 2.5.1. Métricas 
 
-Una métrica es una medida estándar de un grado en el que un sistema de software 
-o un proceso de software posee en sus propiedades. Estas métricas nos van a 
-ayudar a realizar nuestras estimaciones. Para esto le vamos a colocar un valor 
+### 2.5.1. Métricas
+
+Una métrica es una medida estándar de un grado en el que un sistema de software
+o un proceso de software posee en sus propiedades. Estas métricas nos van a
+ayudar a realizar nuestras estimaciones. Para esto le vamos a colocar un valor
 cuantitativo a un aspecto cualitativo del producto de software.
 
 - Métrica
@@ -169,6 +170,7 @@ cuantitativo a un aspecto cualitativo del producto de software.
     - Eficiencia
   - Da un valor al atributo de un producto.
 - Características de las métricas de software:
+
   - Simple y calculable.
   - Congruente y objetiva.
   - Efectivo en la retroalimentación a la calidad.
@@ -232,7 +234,7 @@ En clase resolvimos el siguiente ejercicio:
 > Se le conoce también como _Diagrama de Contexto_.
 
 - Número de entradas externas (EE): 3, contraseña, botón de pánico, activar desactivar
-- Número de salidas externas (SE): 2, mensajes y estado de sensor. 
+- Número de salidas externas (SE): 2, mensajes y estado de sensor.
 - Número de consultas externas (CE): 2, consulta de zona y consulta de sensor.
 - Número de archivos lógicos internos (ALI): 1, subsistema monitoreo y respuesta (son tablas).
 - Número de archivos de interfaz externos (AIE): 4, sensor de prueba, establecimiento de zona, activar/desactivar y alerta de alarma.
@@ -251,6 +253,7 @@ Lo primero que debemos hacer es llenar la siguiente tabla:
   4. Meses
   5. Costo
 - Realizamos las operaciones _paso a paso_, ojo: el profesor pidió que no nos saltáramos pasos en los cálculos porque necesita ver de dónde salieron los valores intermedios.
+
 #### COCOMO
 
 _Constructive Cost Model (COCOMO)_ es un modelo matemático para la estimación de costos.
@@ -315,7 +318,6 @@ La sumatoria de los factores de cada uno van a resultar en el factor de escala.
 |  Very High  |       CMM Level 4        |   4   |
 | Extra High  |       CMM Level 5        |   5   |
 
-
 ##### Valores de Factores de Escala
 
 | Driver | Very Low |  Low  | Nominal | High  | Very High | Extra High |
@@ -356,6 +358,33 @@ $$TDEV_{NS} = C \times (PM_{NS})^F$$
 dónde:
 
 $$F = D + 0.2 \times 0.01 \times \sum_{j=1}^5 SF_j$$
+
+#### COCOMO II: Multiplicadores de Esfuerzo
+
+- RCPX: 
+  - Qué tan complejo es el sistema que vamos a hacerle al cliente.
+  - Que los errores no sean catastróficos
+  - El número y tamaño de base de datos estamos usando
+  - Qué tan compleja o completa quiere la documentación.
+- RUSE:
+  - Qué tan fácil es mejorar o modificar el sistema.
+- PDIF:
+  - Dificultad de plataforma
+  - Capacidad de respuesta
+  - Capacidad de ejecución
+  - Todo lo que tenga que ver con el rendimiento de una computadora en el sistema.
+- PERS:
+  - Personal capability
+  - Conocimientos y habilidades del equipo de desarrollo
+- PREX:
+  - Cuánto tiempo llevan desarrollando productos de software.
+- FCIL:
+  - Facilities available
+  - Es que instalaciones están disponibles
+- SCED:
+  - Presión de la agenda
+  - Qué tanto le urge al cliente
+
 
 ## Glosario de Términos
 
