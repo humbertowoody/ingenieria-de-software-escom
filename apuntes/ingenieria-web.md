@@ -60,7 +60,6 @@
 - Prueba de interfaz
 - Prueba de navegación
 - Prueba de componentes
-- Prueba a nivel de componentes
 - Prueba de configuración
 - Prueba de seguridad
 - Prueba de desempeño
