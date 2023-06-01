@@ -35,6 +35,7 @@
 ## Niveles de MoProSoft
 
 - Nivel 0: Incompleto.
+  Es cuando no se ha realizado ninguna optimización y se comienza el análisis del proyecto.
 - Nivel 1: Realizado.
   Cuando cumple las necesidades básicas de lo que requiere nuestro proyecto.
 - Nivel 2: Gestionado.
